@@ -20,3 +20,17 @@ console.log(Object. is(NaN, NaN)) // true
 
 // Can't compare objects as they will always give false when ever compared with each other
 // As you are trying to compare the reference think of it as comparing two pointers.
+
+// Loosely equal
+const num = 0;
+const big = 0n;
+const str = "0";
+const obj = new String("0");
+
+console.log(num == str); // true
+console.log(big == num); // true
+console.log(str == big); // true
+
+console.log(num == obj); // true
+console.log(big == obj); // true
+console.log(str == obj); // true
